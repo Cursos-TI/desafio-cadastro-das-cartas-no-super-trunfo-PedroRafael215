@@ -7,16 +7,105 @@
 //Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    //novato 
+    //propriedades da Carta 1
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    char estadoCARTA1[2];
+    char codigoCartaCARTA1[10];
+    char nomeCidadeCARTA1[50];
+    int populacaoCARTA1;
+    float areaEmKmCARTA1;
+    float pibCARTA1;
+    int qtdPontosTuristicosCARTA1;
+
+    // propriredades da carta 2
+
+    char estadoCARTA2[2];
+    char codigoCartaCARTA2[10];
+    char nomeCidadeCARTA2[50];
+    int populacaoCARTA2;
+    float areaEmKmCARTA2;
+    float pibCARTA2;
+    int qtdPontosTuristicosCARTA2;
+
+// Pegando as infomações do usuario:
+
+    printf("Olá, seja bem vindo ao jogo SUPER TRUNFO ^w^\n");
+    printf("Preencha 2 cartas.\nPara comecar, por favor, insira as informações da Carta 1 :D\n");
+
+    printf("CARTA 1\n\n");
+
+    printf("Insira a Sigla do Estado:\n");
+    scanf("%[^\n]", estadoCARTA1);
+    getchar();
+
+    printf("Insira o Codigo da Carta\n");
+    scanf("%[^\n]", codigoCartaCARTA1);
+    getchar();
+
+    printf("Insira o nome da cidade\n");
+    scanf("%[^\n]", nomeCidadeCARTA1);
+    getchar();
+
+    printf("Insira a quantidade de Pessoas da Cidade (Populacao)\n");
+    scanf("%d", &populacaoCARTA1);
+    printf("Insira a Area em km² (somente numeros ex: 244.45)\n");
+    scanf("%f", &areaEmKmCARTA1);
+    printf("Insira o PIB (Ex: 233335.442)\n");
+    scanf("%f", &pibCARTA1);
+    printf("insira a quantidade de pontos turisticos\n\n");
+    scanf("%d", &qtdPontosTuristicosCARTA1);
+    getchar();
+
+    printf("Beleza! Agora informe as propriedades da CARTA 2 como as da CARTA 1\n");
+
+    printf("CARTA 2\n\n");
+
+    printf("Insira a Sigla do Estado:\n");
+    scanf("%[^\n]", estadoCARTA2);
+    getchar();
+
+    printf("Insira o Codigo da Carta\n");
+    scanf("%[^\n]", codigoCartaCARTA2);
+    getchar();
+
+    printf("Insira o nome da cidade\n");
+    scanf("%[^\n]", nomeCidadeCARTA2);
+    getchar();
+    
+    printf("Insira a quantidade de Pessoas da Cidade (Populacao)\n");
+    scanf("%d", &populacaoCARTA2);
+    printf("Insira a Area em km² (somente numeros ex: 244.45)\n");
+    scanf("%f", &areaEmKmCARTA2);
+    printf("Insira o PIB (Ex: 233335.442)\n");
+    scanf("%f", &pibCARTA2);
+    printf("insira a quantidade de pontos turisticos\n\n");
+    scanf("%d", &qtdPontosTuristicosCARTA2);
+
+    // Imprimindo na tela as informações das cartas;
+
+    printf("\nCarta 1:\n\n");
+    printf("Estado: %s\n", estadoCARTA1);
+    printf("Código: %s\n", codigoCartaCARTA1);
+    printf("Nome da Cidade: %s\n", nomeCidadeCARTA1);
+    printf("População: %d\n", populacaoCARTA1);
+    printf("Área: %.2f km²\n", areaEmKmCARTA1);
+    printf("PIB: %.2f bilhões de reais\n", pibCARTA1);
+    printf("Número de Pontos Turísticos: %d\n\n", qtdPontosTuristicosCARTA1);
+
+    printf("Carta 2:\n\n");
+    printf("Estado: %s\n", estadoCARTA2);
+    printf("Código: %s\n", codigoCartaCARTA2);
+    printf("Nome da Cidade: %s\n", nomeCidadeCARTA2);
+    printf("População: %d\n", populacaoCARTA2);
+    printf("Área: %.2f km²\n", areaEmKmCARTA2);
+    printf("PIB: %.2f bilhões de reais\n", pibCARTA2);
+    printf("Número de Pontos Turísticos: %d\n", qtdPontosTuristicosCARTA2);
+
+
+
+
 
     return 0;
 }
