@@ -14,10 +14,12 @@ int main() {
     char estadoCARTA1[3];
     char codigoCartaCARTA1[10];
     char nomeCidadeCARTA1[50];
-    int populacaoCARTA1;
+    unsigned long int populacaoCARTA1; //Nivel Mestre
     float areaEmKmCARTA1;
     float pibCARTA1;
     int qtdPontosTuristicosCARTA1;
+
+    float superPoderCARTA1; //Nivel Mestre
 
     //nivel aventureiro
 
@@ -29,10 +31,13 @@ int main() {
     char estadoCARTA2[2];
     char codigoCartaCARTA2[10];
     char nomeCidadeCARTA2[50];
-    int populacaoCARTA2;
+    unsigned long int populacaoCARTA2; //Nivel Mestre
     float areaEmKmCARTA2;
     float pibCARTA2;
     int qtdPontosTuristicosCARTA2;
+
+    float superPoderCARTA2; //Nivel Mestre
+
 
     //nivel aventureiro
 
@@ -103,7 +108,21 @@ int main() {
     pibPerCaptaCARTA1 = (float) pibCARTA1 / populacaoCARTA1 ;
     pibPerCaptaCARTA2 = (float) pibCARTA2 / populacaoCARTA2 ; 
 
+    //calculo nivel mestre
 
+    superPoderCARTA1 += (float) (populacaoCARTA1 + areaEmKmCARTA1 + pibCARTA1 + qtdPontosTuristicosCARTA1 + pibPerCaptaCARTA1 + (1.0 /densidadePopulacionalCARTA1));
+    superPoderCARTA2 += (float) (populacaoCARTA2 + areaEmKmCARTA2 + pibCARTA2 + qtdPontosTuristicosCARTA2 + pibPerCaptaCARTA2 + (1.0 /densidadePopulacionalCARTA2));
+    
+    
+    int resPopulacao = populacaoCARTA1 > populacaoCARTA2? 1 : 0;
+    int resArea = areaEmKmCARTA1 > areaEmKmCARTA2? 1 : 0;
+    int resPib = pibCARTA1 > pibCARTA2? 1 : 0;
+    int resPontosTuristicos = qtdPontosTuristicosCARTA1 > qtdPontosTuristicosCARTA2? 1 : 0;
+    int resDensidadePopulacional = densidadePopulacionalCARTA1 < densidadePopulacionalCARTA2? 1 : 0 ;
+    int resPibPerCapta = pibPerCaptaCARTA1 > pibPerCaptaCARTA2? 1 : 0;
+    int resSuperPoder = superPoderCARTA1 > superPoderCARTA2 ? 1 : 0;
+
+   
     // Imprimindo na tela as informações das cartas;
 
     printf("\nCarta 1:\n\n");
@@ -135,7 +154,15 @@ int main() {
     printf("PIB per Capita: %.2f reais\n\n", pibPerCaptaCARTA2);
 
 
+    //nivel mestre
 
+    printf("\n\nPopulação: %s (%d)", resPopulacao ? "Carta 1 venceu" : "Carta 2 venceu", resPopulacao);
+    printf("\nÁrea: %s (%d)", resArea ? "Carta 1 venceu" : "Carta 2 venceu", resArea);
+    printf("\nPIB: %s (%d)", resPib ? "Carta 1 venceu" : "Carta 2 venceu", resPib);
+    printf("\nPontos Turísticos : %s (%d)", resPontosTuristicos ? "Carta 1 venceu" : "Carta 2 venceu", resPontosTuristicos);
+    printf("\nDensidade Popuacional: %s (%d)", resDensidadePopulacional ? "Carta 1 venceu" : "Carta 2 venceu", resDensidadePopulacional);
+    printf("\nPIB per Capita: %s (%d)", resPibPerCapta ? "Carta 1 venceu" : "Carta 2 venceu", resPibPerCapta);
+    printf("\nSuperPoder: %s (%d)", resSuperPoder ? "Carta 1 venceu" : "Carta 2 venceu", resSuperPoder);
 
 
 
