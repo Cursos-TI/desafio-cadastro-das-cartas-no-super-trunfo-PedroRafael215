@@ -11,7 +11,7 @@ int main() {
     //novato 
     //propriedades da Carta 1
     
-    char estadoCARTA1[2];
+    char estadoCARTA1[3];
     char codigoCartaCARTA1[10];
     char nomeCidadeCARTA1[50];
     int populacaoCARTA1;
@@ -37,15 +37,15 @@ int main() {
     printf("CARTA 1\n\n");
 
     printf("Insira a Sigla do Estado:\n");
-    scanf("%[^\n]", estadoCARTA1);
+    scanf("%2[^\n]", estadoCARTA1);
     getchar();
 
     printf("Insira o Codigo da Carta\n");
-    scanf("%[^\n]", codigoCartaCARTA1);
+    scanf("%9[^\n]", codigoCartaCARTA1);
     getchar();
 
     printf("Insira o nome da cidade\n");
-    scanf("%[^\n]", nomeCidadeCARTA1);
+    scanf("%49[^\n]", nomeCidadeCARTA1);
     getchar();
 
     printf("Insira a quantidade de Pessoas da Cidade (Populacao)\n");
@@ -54,24 +54,24 @@ int main() {
     scanf("%f", &areaEmKmCARTA1);
     printf("Insira o PIB (Ex: 233335.442)\n");
     scanf("%f", &pibCARTA1);
-    printf("insira a quantidade de pontos turisticos\n\n");
+    printf("insira a quantidade de pontos turisticos\n");
     scanf("%d", &qtdPontosTuristicosCARTA1);
     getchar();
 
-    printf("Beleza! Agora informe as propriedades da CARTA 2 como as da CARTA 1\n");
+    printf("\n\nBeleza! Agora informe as propriedades da CARTA 2 como as da CARTA 1\n");
 
     printf("CARTA 2\n\n");
 
     printf("Insira a Sigla do Estado:\n");
-    scanf("%[^\n]", estadoCARTA2);
+    scanf("%2[^\n]", estadoCARTA2);
     getchar();
 
     printf("Insira o Codigo da Carta\n");
-    scanf("%[^\n]", codigoCartaCARTA2);
+    scanf("%9[^\n]", codigoCartaCARTA2);
     getchar();
 
     printf("Insira o nome da cidade\n");
-    scanf("%[^\n]", nomeCidadeCARTA2);
+    scanf("%49[^\n]", nomeCidadeCARTA2);
     getchar();
     
     printf("Insira a quantidade de Pessoas da Cidade (Populacao)\n");
@@ -80,7 +80,7 @@ int main() {
     scanf("%f", &areaEmKmCARTA2);
     printf("Insira o PIB (Ex: 233335.442)\n");
     scanf("%f", &pibCARTA2);
-    printf("insira a quantidade de pontos turisticos\n\n");
+    printf("insira a quantidade de pontos turisticos\n");
     scanf("%d", &qtdPontosTuristicosCARTA2);
 
     // Imprimindo na tela as informações das cartas;
